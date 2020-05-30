@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /index.php
-    destination: /var/www/html/
+    destination: /var/www/php/
   - source: /happiness.png
-    destination: /var/www/html/
+    destination: /var/www/php/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
