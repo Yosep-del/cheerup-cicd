@@ -3,7 +3,13 @@ os: linux
 files:
   - source: /index.php
     destination: /var/www/html/
-  - source: /index.php
+  - source: /add.php
+    destination: /var/www/html/
+  - source: /config.php
+    destination: /var/www/html/
+  - source: /delete.php
+    destination: /var/www/html/
+  - source: /edit.php
     destination: /var/www/html/
 hooks:
   BeforeInstall:
