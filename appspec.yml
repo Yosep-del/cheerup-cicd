@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /index.php
     destination: /var/www/php/
-  - source: /happiness.png
+  - source: /add.php
     destination: /var/www/php/
 hooks:
   BeforeInstall:
