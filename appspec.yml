@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /index.php
-    destination: /var/www/php/
-  - source: /add.php
-    destination: /var/www/php/
+    destination: /var/www/html/
+  - source: /index.php
+    destination: /var/www/html/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
