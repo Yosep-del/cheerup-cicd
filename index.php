@@ -1,33 +1,35 @@
-<?php
-// Create database connection using config file
-include_once("config.php");
-
-// Fetch all users data from database
-$result = mysqli_query($con, "SELECT * FROM users ORDER BY id DESC");
-?>
-
+<!DOCTYPE html>
 <html>
-<head>    
-    <title>Homepage</title>
+<head>
+	<title>Pendaftaran Siswa Baru | SMK Coding</title>
 </head>
 
 <body>
-<a href="add.php">Add New User</a><br/><br/>
-
-    <table width='80%' border=1>
-
-    <tr>
-        <th>Name</th> <th>Mobile</th> <th>Email</th> <th>Update</th>
-    </tr>
-    <?php  
-    while($user_data = mysqli_fetch_array($result)) {         
-        echo "<tr>";
-        echo "<td>".$user_data['name']."</td>";
-        echo "<td>".$user_data['mobile']."</td>";
-        echo "<td>".$user_data['email']."</td>";    
-        echo "<td><a href='edit.php?id=$user_data[id]'>Edit</a> | <a href='delete.php?id=$user_data[id]'>Delete</a></td></tr>";        
-    }
-    ?>
-    </table>
-</body>
+	<header>
+		<h3>Pendaftaran Siswa Baru</h3>
+		<h1>SMK Coding</h1>
+	</header>
+	
+	<h4>Menu</h4>
+	<nav>
+		<ul>
+			<li><a href="form-daftar.php">Daftar Baru</a></li>
+			<li><a href="list-siswa.php">Pendaftar</a></li>
+		</ul>
+	</nav>
+	
+	
+	<?php if(isset($_GET['status'])): ?>
+	<p>
+		<?php
+			if($_GET['status'] == 'sukses'){
+				echo "Pendaftaran siswa baru berhasil!";
+			} else {
+				echo "Pendaftaran gagal!";
+			}
+		?>
+	</p>
+	<?php endif; ?>
+	
+	</body>
 </html>
