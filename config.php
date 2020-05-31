@@ -2,7 +2,7 @@
 	$server = 'db2.cswtsj9rjmlo.us-east-1.rds.amazonaws.com';
 	$user = 'admin';
 	$pass = 'plplplpl090';
-	$db = 'tugasadsis';
+	$data = 'tugasadsis';
 
-	$con = mysqli($server,$user,$pass,$db) or die("failed to connect");
+	$db = mysqli($server,$user,$pass,$data) or die("failed to connect");
 ?>
