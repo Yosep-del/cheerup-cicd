@@ -4,5 +4,5 @@
 	$pass = 'plplplpl090';
 	$data = 'tugasadsis';
 
-	$db = mysqli($server,$user,$pass,$data) or die("failed to connect");
+	$db = mysqli_connect($server,$user,$pass,$data) or die("failed to connect");
 ?>
