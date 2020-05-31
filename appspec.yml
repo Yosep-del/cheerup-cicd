@@ -3,13 +3,19 @@ os: linux
 files:
   - source: /index.php
     destination: /var/www/html/
-  - source: /add.php
-    destination: /var/www/html/
   - source: /config.php
     destination: /var/www/html/
-  - source: /delete.php
+  - source: /form-daftar.php
     destination: /var/www/html/
-  - source: /edit.php
+  - source: /form-edit.php
+    destination: /var/www/html/
+  - source: /hapus.php
+    destination: /var/www/html/
+  - source: /list-siswa.php
+    destination: /var/www/html/
+  - source: /proses-edit.php
+    destination: /var/www/html/
+  - source: /proses-pendaftaran.php
     destination: /var/www/html/
 hooks:
   BeforeInstall:
