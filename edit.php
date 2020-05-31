@@ -12,7 +12,7 @@ if(isset($_POST['update']))
     $email=$_POST['email'];
 
     // update user data
-    $result = mysqli_query($mysqli, "UPDATE users SET name='$name',email='$email',mobile='$mobile' WHERE id=$id");
+    $result = mysqli_query($con, "UPDATE users SET name='$name',email='$email',mobile='$mobile' WHERE id=$id");
 
     // Redirect to homepage to display updated user in list
     header("Location: index.php");
@@ -24,7 +24,7 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 // Fetech user data based on id
-$result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=$id");
+$result = mysqli_query($con, "SELECT * FROM users WHERE id=$id");
 
 while($user_data = mysqli_fetch_array($result))
 {
