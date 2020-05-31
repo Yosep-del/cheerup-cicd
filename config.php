@@ -1,7 +1,8 @@
 <?php
-/**
- * using mysqli_connect for database connection
- */
+	$server = 'db-yosep.cswtsj9rjmlo.us-east-1.rds.amazonaws.com'';
+	$user = 'admin';
+	$pass = 'plplplpl090';
+	$db = 'tugas4';
 
-$link = new mysqli($_SERVER['db-yosep.cswtsj9rjmlo.us-east-1.rds.amazonaws.com'], $_SERVER['admin'], $_SERVER['plplplpl090'], $_SERVER['tugas4'], $_SERVER['3306']);
+	$con = mysqli_connect($server,$user,$pass,$db) or die("failed to connect");
 ?>
